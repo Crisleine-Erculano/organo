@@ -13,13 +13,18 @@ const Formulario = () => {
       'Mobile',
       'Inovação e Gestão'
    ]
+   
+   const aoSalvar =(evento)=>{
+      evento.preventDefault()
+      console.log('O form foi submetido')
+   }
    return (
       <section className="formulario">
-         <form>
+         <form onSubmit={aoSalvar}>
             <h2>Preencha os campos para criar os cards do colaborador</h2>
             
-            <CampoTexto label="Nome" placeholder="Digite o seu nome." />
-            <CampoTexto label="Cargo" placeholder="Digite o seu Cargo." />
+            <CampoTexto obrigatorio={true} label="Nome" placeholder="Digite o seu nome." />
+            <CampoTexto label="Cargo " placeholder="Digite o seu Cargo." />
             <CampoTexto label="Imagem" placeholder="Digite o endereço da  imagem." />
             
             <ListaSuspensa label="Time" itens={times}/>
