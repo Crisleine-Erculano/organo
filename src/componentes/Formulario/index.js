@@ -47,7 +47,7 @@ const Formulario = (props) => {
             />
 
             <ListaSuspensa
-               label="Team"
+               label="Time"
                itens={props.nomesDosTimes}
                valor={time}
                aoAlterado={valor => setTime(valor)}
