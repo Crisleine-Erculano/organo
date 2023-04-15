@@ -22,8 +22,11 @@ const Formulario = (props) => {
       setNome('')
       setCargo('')
       setImagem('')
+      setTime('')
       
+
    }
+   
    return (
       <section className="formulario">
          <form onSubmit={aoSalvar}>
